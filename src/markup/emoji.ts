@@ -1,0 +1,91 @@
+/**
+ * :emoji_name: to Unicode conversion
+ * Only commonly used emoji are included (minimal for lightweight)
+ */
+
+const EMOJI_MAP: Record<string, string> = {
+  smile: '😄',
+  laughing: '😆',
+  wink: '😉',
+  heart: '❤️',
+  thumbsup: '👍',
+  thumbsdown: '👎',
+  star: '⭐',
+  fire: '🔥',
+  check: '✅',
+  x: '❌',
+  warning: '⚠️',
+  info: 'ℹ️',
+  question: '❓',
+  exclamation: '❗',
+  rocket: '🚀',
+  sparkles: '✨',
+  tada: '🎉',
+  bug: '🐛',
+  wrench: '🔧',
+  package: '📦',
+  lock: '🔒',
+  unlock: '🔓',
+  bell: '🔔',
+  bulb: '💡',
+  memo: '📝',
+  folder: '📁',
+  file: '📄',
+  clock: '🕐',
+  hourglass: '⏳',
+  zap: '⚡',
+  gear: '⚙️',
+  trash: '🗑️',
+  link: '🔗',
+  mag: '🔍',
+  key: '🔑',
+  shield: '🛡️',
+  chart: '📊',
+  wave: '👋',
+  pray: '🙏',
+  clap: '👏',
+  muscle: '💪',
+  eyes: '👀',
+  thinking: '🤔',
+  party: '🥳',
+  cry: '😢',
+  angry: '😡',
+  sweat: '😅',
+  skull: '💀',
+  ghost: '👻',
+  robot: '🤖',
+  alien: '👽',
+  sun: '☀️',
+  moon: '🌙',
+  cloud: '☁️',
+  rain: '🌧️',
+  snow: '❄️',
+  tree: '🌲',
+  flower: '🌸',
+  earth: '🌍',
+  ocean: '🌊',
+  mountain: '⛰️',
+  house: '🏠',
+  car: '🚗',
+  airplane: '✈️',
+  ship: '🚢',
+  bike: '🚲',
+  coffee: '☕',
+  beer: '🍺',
+  pizza: '🍕',
+  cake: '🎂',
+  apple: '🍎',
+  banana: '🍌',
+  grape: '🍇',
+  watermelon: '🍉',
+};
+
+/**
+ * Replaces :emoji_name: patterns with Unicode emoji
+ * @param text String to convert
+ */
+export function replaceEmoji(text: string): string {
+  return text.replace(/:([a-z_]+):/g, (match, name: string) => {
+    return EMOJI_MAP[name] ?? match;
+  });
+}
