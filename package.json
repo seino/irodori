@@ -1,0 +1,60 @@
+{
+  "name": "irodori",
+  "version": "0.1.0",
+  "description": "Beautiful terminal UI for Node.js — irodori (彩り)",
+  "license": "MIT",
+  "author": "seino",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seino/irodori.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seino/irodori/issues"
+  },
+  "homepage": "https://github.com/seino/irodori#readme",
+  "keywords": [
+    "terminal",
+    "console",
+    "cli",
+    "ansi",
+    "color",
+    "table",
+    "progress",
+    "spinner",
+    "rich",
+    "tui"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@vitest/coverage-v8": "^1.6.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "npm run build && vitest run --config vitest.e2e.config.ts",
+    "typecheck": "tsc --noEmit"
+  }
+}
