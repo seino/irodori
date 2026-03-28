@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ESM import (dist/index.js) > Panel behavior > snapshot: with title and subtitle 1`] = `
+[
+  "╭ Title ───────╮",
+  "│ Content here │",
+  "╰ Subtitle ────╯",
+]
+`;
+
+exports[`ESM import (dist/index.js) > Table behavior > snapshot: rounded border 1`] = `
+[
+  "╭───────┬───────╮",
+  "│ Name  │ Value │",
+  "├───────┼───────┤",
+  "│ color │ red   │",
+  "│ size  │ 42    │",
+  "╰───────┴───────╯",
+]
+`;
