@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Panel > snapshot of ANSI output 1`] = `
+[
+  "╭ Greeting ─────╮",
+  "│ Hello, World! │",
+  "╰───────────────╯",
+]
+`;
