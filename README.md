@@ -4,6 +4,8 @@
 
 A zero-dependency, all-in-one terminal UI library that brings Rich-like markup, tables, progress bars, spinners, and live rendering to Node.js.
 
+![irodori demo](docs/images/demo.png)
+
 ## Features
 
 - **Markup** — `[bold red]Hello[/] World` style inline formatting
